@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffeef5, #ffc1d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 25px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #e63970;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.instruction {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.heart-area {
+    position: relative;
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+.heart {
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heart:hover {
+    transform: scale(1.3);
+}
+
+.heart:active {
+    transform: scale(1.6);
+}
+
+.heart:nth-child(1) {
+    left: 5%;
+    top: 20%;
+}
+
+.heart:nth-child(2) {
+    left: 28%;
+    top: 5%;
+}
+
+.heart:nth-child(3) {
+    right: 10%;
+    top: 15%;
+}
+
+.heart:nth-child(4) {
+    left: 15%;
+    bottom: 5%;
+}
+
+.heart:nth-child(5) {
+    right: 25%;
+    bottom: 10%;
+}
+
+.heart:nth-child(6) {
+    left: 48%;
+    top: 40%;
+}
+
+.heart:nth-child(7) {
+    right: 3%;
+    bottom: 5%;
+}
+
+.heart:nth-child(8) {
+    left: 40%;
+    bottom: 0;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.message-box {
+    background: #fff0f6;
+    border: 2px solid #ffb3cc;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#message {
+    color: #c92f62;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.next-btn {
+    border: none;
+    background: #e63970;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background: #c91f58;
+    transform: scale(1.05);
+}
+
+.clicked {
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.8) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
